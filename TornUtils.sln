@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33020.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TornUtils", "TornUtils\TornUtils.csproj", "{14986A26-BCAE-43A7-852B-26887F768749}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TornUtilsASP", "TornUtilsASP\TornUtilsASP.csproj", "{C679D7D9-2FFD-4ECD-855C-D8CF65931203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{14986A26-BCAE-43A7-852B-26887F768749}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14986A26-BCAE-43A7-852B-26887F768749}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14986A26-BCAE-43A7-852B-26887F768749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C679D7D9-2FFD-4ECD-855C-D8CF65931203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C679D7D9-2FFD-4ECD-855C-D8CF65931203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C679D7D9-2FFD-4ECD-855C-D8CF65931203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C679D7D9-2FFD-4ECD-855C-D8CF65931203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
