@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Net.Http.Json;
+using Newtonsoft.Json;
 
 namespace TornUtils;
 internal class TornAPI
@@ -34,6 +38,13 @@ internal class TornAPI
                 $"/user/{user}?selections={selections}&key={key}");
             return response;
         }
+    }
+
+    public async Task<JsonNode> QueryJson(string user, string selections)
+    {
+        HttpResponseMessage httpResponseMessage = await Query(user, selections);
+        string bodyStr = await httpResponseMessage.Content.ReadAsStringAsync();
+        return JsonNode.Parse(bodyStr)!;
     }
 }
 
