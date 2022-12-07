@@ -9,7 +9,7 @@ namespace TornUtils
     {
         static async Task Main(string[] args)
         {
-            var tornAPI = new TornAPI();
+            var tornAPI = new CachedTornAPI();
             JsonNode response = await tornAPI.QueryJson("janepe", "attacks");
             Console.WriteLine(response.ToString());
 
