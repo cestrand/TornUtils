@@ -12,7 +12,10 @@ internal class CachedTornAPI : TornAPI
     SerializeCacher cache;
     public CachedTornAPI()
     {
-        cache = new SerializeCacher();
+        cache = new SerializeCacher()
+        {
+            RefreshTime = TimeSpan.FromHours(1)
+        };
     }
 
     public async new Task<JsonNode> QueryJson(string user, string selections, bool cached = true)

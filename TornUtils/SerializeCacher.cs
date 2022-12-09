@@ -11,6 +11,7 @@ internal class SerializeCacher
 {
     DirectoryInfo dir;
     Base58 coder = new Base58(Base58Alphabet.Flickr);
+    public TimeSpan RefreshTime = TimeSpan.FromMinutes(5);
 
     public SerializeCacher(string dirPath="cache")
     {
@@ -34,7 +35,7 @@ internal class SerializeCacher
             return null;
         }
         DateTime ts = lastCachedTs.Value;
-        if (DateTime.UtcNow - ts > TimeSpan.FromHours(1))
+        if (DateTime.UtcNow - ts > RefreshTime)
         {
             return null;
         }
